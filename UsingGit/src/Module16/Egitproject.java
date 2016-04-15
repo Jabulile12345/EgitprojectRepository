@@ -109,8 +109,7 @@ System.out.println("Enter your LectureModule");
 LectureModule = input.next();
 input.close();
 // inserting data into the database
-String lec = "INSERT INTO lecture
-(LectureId,Firstname,Lastname,Lecturephone,LectureSalary,LectureModule) VALUES (?,?,?,?,?,?)";
+String lec = "INSERT INTO lecture (LectureId,Firstname,Lastname,Lecturephone,LectureSalary,LectureModule) VALUES (?,?,?,?,?,?)";
 PreparedStatement line = connect.prepareStatement(lec);
 line.setInt(1,LectureId );
 line.setString( 2,Firstname);
